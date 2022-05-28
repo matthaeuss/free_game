@@ -12,7 +12,7 @@ function GameList() {
     const {games} = useFetch(filter);
 
     return (
-        <div style={{display: "flex", flexWrap: 'wrap'}}>
+        <div style={{display: "flex", flexWrap: 'wrap',}}>
             {games.map((game) => (
                 <GameCard key={game.id} game={game}/>
             ))}

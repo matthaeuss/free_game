@@ -5,7 +5,7 @@ import {API_HOST, API_KEY} from "../components/constants/constants";
 
 const localCache = {};
 
-function UseFetch({platform, sortBy, genre, tags}) {
+function useFetch({platform, sortBy, genre, tags}) {
 
     const [games, setGames] = useState([]);
 
@@ -45,4 +45,4 @@ function UseFetch({platform, sortBy, genre, tags}) {
     return {games};
 }
 
-export default UseFetch;
+export default useFetch;
