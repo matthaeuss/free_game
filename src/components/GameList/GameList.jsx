@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import useFetch from "../../hooks/useFetch";
+import GameCard from "../GameCard/GameCard";
 
 function GameList() {
 
@@ -11,7 +12,11 @@ function GameList() {
     const {games} = useFetch(filter);
 
     return (
-        <pre>{JSON.stringify(games, null, 2)}</pre>
+        <div style={{display: "flex", flexWrap: 'wrap'}}>
+            {games.map((game) => (
+                <GameCard key={game.id} game={game}/>
+            ))}
+        </div>
     );
 }
 
