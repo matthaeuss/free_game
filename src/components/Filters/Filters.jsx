@@ -68,8 +68,8 @@ function Filters({setFilter}) {
 
             <label htmlFor="sort_by">Sort by: </label>
             <select
-                name="sort_by"
-                id="sort_by"
+                name="sortBy"
+                id="sortBy"
                 value={sortBy}
                 onChange={handleSortBy}
             >
