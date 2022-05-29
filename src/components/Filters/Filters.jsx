@@ -38,7 +38,7 @@ function Filters({setFilter}) {
                 onChange={handlePlatform}
             >
                 {PLATFORMS.map(({value, display}) => (
-                    <option value={value}>{display}</option>
+                    <option key={value} value={value}>{display}</option>
                 ))}
             </select>
 
@@ -50,7 +50,7 @@ function Filters({setFilter}) {
                 onChange={handleGenre}
             >
                 {GENRES.map(({value, display}) => (
-                    <option value={value}>{display}</option>
+                    <option key={value} value={value}>{display}</option>
                 ))}
             </select>
 
@@ -62,7 +62,7 @@ function Filters({setFilter}) {
                 onChange={handleTags}
             >
                 {TAGS.map(({value, display}) => (
-                    <option value={value}>{display}</option>
+                    <option key={value} value={value}>{display}</option>
                 ))}
             </select>
 
@@ -73,8 +73,8 @@ function Filters({setFilter}) {
                 value={sortBy}
                 onChange={handleSortBy}
             >
-                {PLATFORMS.map(({value, display}) => (
-                    <option value={value}>{display}</option>
+                {SORT_BY.map(({value, display}) => (
+                    <option key={value} value={value}>{display}</option>
                 ))}
             </select>
         </>
